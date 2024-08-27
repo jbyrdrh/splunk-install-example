@@ -1,5 +1,10 @@
 # Ansible-Splunk-Base
 
+I modified the example from https://github.com/johnmcgovern/ansible-splunk-base.git
+which I found on youtube: https://www.youtube.com/watch?v=vEDXfFebG3E
+
+- The main playbook that I had to modify was roles/os-config/tasks/main.yml
+
 This is an Ansible project that installs or upgrades Splunk to a specific version. It can also perform basic OS config (ulimits, THP disabled, hostname, etc.), ./splunk/etc/ backups, and SSL cert installation.
 
 
@@ -12,7 +17,7 @@ This is an Ansible project that installs or upgrades Splunk to a specific versio
 
 2. git clone this project
 
-		- git clone https://github.com/johnmcgovern/ansible-splunk-base.git
+		- git clone https://github.com/jbyrdrh/splunk-install-example.git
 	
 3. Navigate to project base directory
 
