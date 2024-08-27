@@ -1,0 +1,46 @@
+# Copy splunk forwarder rpm to managed node
+- name: Copy splunk forwarder to managed node
+  copy:
+    src: /home/ansible/ansible-splunk-base/splunkforwarder-9.3.0-51ccf43db5bd.x86_64.rpm
+    dest: /home/ansible/splunkforwarder-9.3.0-51ccf43db5bd.x86_64.rpm
+
+# Install splunk forwarder
+- name: Install splunk forwarder
+  command: sudo /usr/bin/yum install splunkforwarder-9.3.0-51ccf43db5bd.x86_64.rpm -y
+  tags: splunk
+
+# Create file
+- name: Create file
+  shell: 'echo "[target-broker:deploymentServer]" >> /opt/splunkforwarder/etc/system/local/deploymentclient.conf'
+  tags: splunk
+
+# Add to file
+- name: Add to file
+  shell: 'echo "targetUri = 10.1.6.44:8089" >> /opt/splunkforwarder/etc/system/local/deploymentclient.conf'
+  tags: splunk
+
+# Set owner
+- name: Set owner
+  command: sudo chown -R splunk /opt/splunkforwarder/
+  tags: splunk
+
+# Set group
+- name: Set group
+  command: sudo chgrp -R splunk /opt/splunkforwarder
+  tags: splunk
+
+# Set forward server
+- name: Set forward server
+  command: sudo -u splunk /opt/splunkforwarder/bin/splunk add forward-server 10.1.6.42:9997 --accept-license
+  ignore_errors: yes
+  tags: splunk
+
+# Start splunk on boot
+- name: Start splunk on boot
+  command: sudo /opt/splunkforwarder/bin/splunk enable boot-start -user splunk
+  tags: splunk
+
+# Start splunk
+- name: Start splunk
+  command: sudo /opt/splunkforwarder/bin/splunk start
+  tags: splunk

@@ -1,0 +1,151 @@
+---
+ansible_connection: local
+ansible_environment: {}
+ansible_post_tasks: []
+ansible_pre_tasks: []
+cert_prefix: https
+config:
+  baked: default.yml
+  defaults_dir: /tmp/defaults
+  env:
+    headers: null
+    var: SPLUNK_DEFAULTS_URL
+    verify: true
+  host:
+    headers: null
+    url: null
+    verify: true
+  max_delay: 60
+  max_retries: 3
+  max_timeout: 1200
+dmc_asset_interval: 3,18,33,48 * * * *
+dmc_forwarder_monitoring: false
+docker: true
+es_ssl_enablement: --ssl_enablement auto
+hide_password: false
+java_download_url: null
+java_update_version: null
+java_version: null
+restart_retry_delay: 30
+retry_delay: 6
+retry_num: 60
+shc_sync_retry_num: 60
+splunk:
+  admin_user: admin
+  allow_upgrade: true
+  app_paths:
+    default: /opt/splunk/etc/apps
+    deployment: /opt/splunk/etc/deployment-apps
+    httpinput: /opt/splunk/etc/apps/splunk_httpinput
+    idxc: /opt/splunk/etc/master-apps
+    shc: /opt/splunk/etc/shcluster/apps
+  apps_location_local: []
+  appserver:
+    port: 8065
+  artifact_auth_pass: null
+  artifact_auth_user: null
+  asan: false
+  auxiliary_cluster_masters: []
+  build_url_bearer_token: null
+  cluster_master_url: null
+  connection_timeout: 0
+  declarative_admin_password: false
+  deployer_url: null
+  deployment_client:
+    name: null
+  dfs:
+    dfc_num_slots: 4
+    dfw_num_slots: 10
+    dfw_num_slots_enabled: false
+    enable: false
+    port: 9000
+    spark_master_host: 127.0.0.1
+    spark_master_webui_port: 8080
+  disable_popups: false
+  dsp:
+    cert: null
+    enable: false
+    pipeline_desc: null
+    pipeline_name: null
+    pipeline_spec: null
+    server: forwarders.scp.splunk.com:9997
+    verify: false
+  enable_service: false
+  enable_tcp_mode: false
+  es:
+    ssl_enablement: auto
+  exec: /opt/splunk/bin/splunk
+  group: splunk
+  hec:
+    cert: null
+    enable: true
+    password: redhat
+    port: 8088
+    ssl: true
+    token: 0f237ca2-0714-4ab1-9acf-20d1cf50f8c0
+  home: /opt/splunk
+  http_enableSSL: 0
+  http_enableSSL_cert: null
+  http_enableSSL_privKey: null
+  http_enableSSL_privKey_password: null
+  http_port: 8000
+  idxc:
+    discoveryPass4SymmKey: OUHCqcKXOlZ7w4cXd8OoYcKDw4oow5cxw5rCssOOw5LCqMOpw5E=
+    label: idxc_label
+    pass4SymmKey: OUHCqcKXOlZ7w4cXd8OoYcKDw4oow5cxw5rCssOOw5LCqMOpw5E=
+    replication_factor: 3
+    replication_port: 9887
+    search_factor: 3
+    secret: OUHCqcKXOlZ7w4cXd8OoYcKDw4oow5cxw5rCssOOw5LCqMOpw5E=
+  ignore_license: false
+  kvstore:
+    port: 8191
+  launch: {}
+  license_download_dest: /tmp/splunk.lic
+  license_master_url: ''
+  multisite_master_port: 8089
+  multisite_replication_factor_origin: 2
+  multisite_replication_factor_total: 3
+  multisite_search_factor_origin: 1
+  multisite_search_factor_total: 3
+  opt: /opt
+  pass4SymmKey: null
+  password: w5/CpsOcUxjDtcO2wpTCh3jCq2Fxwp5swqQuJ2vDlMKld2jCuA==
+  pid: /opt/splunk/var/run/splunk/splunkd.pid
+  root_endpoint: null
+  s2s:
+    ca: null
+    cert: null
+    enable: true
+    password: null
+    port: 9997
+    ssl: false
+  search_head_captain_url: null
+  secret: null
+  service_name: null
+  set_search_peers: true
+  shc:
+    deployer_push_mode: null
+    label: shc_label
+    pass4SymmKey: wr3DkydyFXF2w6LCuQPChMOew7MoSEDCjnfDqMKEw4jCo8OIwp4=
+    replication_factor: 3
+    replication_port: 9887
+    secret: wr3DkydyFXF2w6LCuQPChMOew7MoSEDCjnfDqMKEw4jCo8OIwp4=
+  smartstore: null
+  splunk_http_enabled: false
+  ssl:
+    ca: null
+    cert: null
+    enable: true
+    password: null
+  svc_port: 8089
+  tar_dir: splunk
+  uds_socket_path_url: '%2Fopt%2Fsplunkforwarder%2Fvar%2Frun%2Fsplunk%2Fcli.socket'
+  user: splunk
+  wildcard_license: false
+splunk_home_ownership_enforcement: true
+splunkbase_password: null
+splunkbase_token: null
+splunkbase_username: null
+wait_for_splunk_retry_num: 60
+
