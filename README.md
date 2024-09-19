@@ -2,6 +2,11 @@
 
 In this demo, I want to show you a quick and easy way to perform a bare installation of Splunk using Ansible.
 
+I have cloned the git project onto my AAP controller.
+
+First, I'll change into the `ansible-splunk-base` directory.
+
+
 I modified the example from https://github.com/johnmcgovern/ansible-splunk-base.git
 which I found on youtube: https://www.youtube.com/watch?v=vEDXfFebG3E
 
@@ -12,10 +17,7 @@ This is an Ansible project that installs or upgrades Splunk to a specific versio
 
 ### Setup
 
-1. Install Ansible
- 
-		- sudo apt-get install ansible (Ubuntu) 
-		- brew install ansible (macOS)
+1. A single Ansible Automation Controller is sufficient for this demo
 
 2. git clone this project
 
@@ -25,7 +27,7 @@ This is an Ansible project that installs or upgrades Splunk to a specific versio
 
 		- cd ./ansible-splunk-base		
 
-4. Copy hosts.sample to hosts
+4. Copy `hosts.sample` to hosts
 
 		- cp hosts.sample hosts
 
