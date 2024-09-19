@@ -45,7 +45,7 @@ cp group_vars/all.sample group_vars/all
 vi group_vars/all
 ~~~
 
-In this demo, I defined the following variables:
+In this demo, I defined the following variables. The rest of the varibles can remain as the default values.:
 
 ~~~
 ansible_user: ansible
