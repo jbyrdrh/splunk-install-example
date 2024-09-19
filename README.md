@@ -1,19 +1,8 @@
 # Ansible-Splunk-Base
 
-In this demo, I want to show you a quick and easy way to perform a bare installation of Splunk using Ansible.
+In this demo, I want to show you a quick and easy way to perform a bare installation of Splunk using Ansible. This is an Ansible project that installs or upgrades Splunk to a specific version. It can also perform basic OS config (ulimits, THP disabled, hostname, etc.), ./splunk/etc/ backups, and SSL cert installation. The main playbook that I had to modify was `roles/os-config/tasks/main.yml`.
 
-I have cloned the git project onto my AAP controller.
-
-First, I'll change into the `ansible-splunk-base` directory.
-
-
-I modified the example from https://github.com/johnmcgovern/ansible-splunk-base.git
-which I found on youtube: https://www.youtube.com/watch?v=vEDXfFebG3E
-
-- The main playbook that I had to modify was roles/os-config/tasks/main.yml
-
-This is an Ansible project that installs or upgrades Splunk to a specific version. It can also perform basic OS config (ulimits, THP disabled, hostname, etc.), ./splunk/etc/ backups, and SSL cert installation.
-
+NOTE: This demo did not originate with me. I created my own version of the following example: https://github.com/johnmcgovern/ansible-splunk-base.git
 
 ### Setup
 
