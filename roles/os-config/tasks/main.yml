@@ -11,12 +11,12 @@
 
 # Create file
 - name: Create file
-  shell: 'echo "[target-broker:deploymentServer]" >> /opt/splunkforwarder/etc/system/local/deploymentclient.conf'
+  shell: 'sudo echo "[target-broker:deploymentServer]" >> /opt/splunkforwarder/etc/system/local/deploymentclient.conf'
   tags: splunk
 
 # Add to file
 - name: Add to file
-  shell: 'echo "targetUri = 10.1.6.44:8089" >> /opt/splunkforwarder/etc/system/local/deploymentclient.conf'
+  shell: 'sudo echo "targetUri = 10.1.6.44:8089" >> /opt/splunkforwarder/etc/system/local/deploymentclient.conf'
   tags: splunk
 
 # Set owner

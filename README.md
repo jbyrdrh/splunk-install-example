@@ -71,6 +71,8 @@ cd ./ansible-splunk-base
 ansible-playbook -i hosts install.yml
 ~~~
 
+NOTE: I verfied that this playbook installs Splunk successfully on RHEL 9.
+
 3. -or- run the Splunk upgrade playbook
 
 ~~~
@@ -150,7 +152,7 @@ ansible-playbook -i hosts os-config install.yml tls-config.yml
 This role has been tested on:
 
 - Ubuntu 22.04, 20.04, & 18.04 Server (LTS)
-- RHEL 8
+- RHEL 8/9
 - CentOS 7 1810
 - Amazon Linux 2 2022.06 & 2020.04
 
@@ -173,11 +175,4 @@ This role has been tested on:
 - Simplified version/file/hash dictionary.
 
 
-### Warranty
 
-This project is provided WITHOUT any form of warranty and should be tested thoroughly before using it in your environment. Development is best-effort only. This project is provided as-is with no guarantee as to fitness for a specific purpose. Please use it at your own risk.
-
-
-### Contact
-
-- john@johnmcgovern.com or https://www.johnmcgovern.com
