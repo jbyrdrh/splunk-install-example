@@ -17,21 +17,25 @@ This is an Ansible project that installs or upgrades Splunk to a specific versio
 
 ### Setup
 
-1. A single Ansible Automation Controller is sufficient for this demo
+1. A single Ansible Automation Controller is sufficient for this demo.
 
-2. git clone this project
+2. git clone this project:
 
-		- git clone https://github.com/jbyrdrh/splunk-install-example.git
+~~
+git clone https://github.com/jbyrdrh/splunk-install-example.git
+~~~
 	
-3. Navigate to project base directory
+3. Two files need to modified for this demo. First, I'll change into the `ansible-splunk-base` directory.
 
-		- cd ./ansible-splunk-base		
+~~~
+cd ./ansible-splunk-base		
+~~~
 
-4. Copy `hosts.sample` to hosts
+4. Copy the `hosts.sample` file to `hosts`
 
 		- cp hosts.sample hosts
 
-5. Edit hosts file to include desired hosts
+5. Edit the hosts file to include the desired managed nodes in your test environment.
 
 		- vi hosts
 	
