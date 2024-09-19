@@ -45,6 +45,18 @@ cp group_vars/all.sample group_vars/all
 vi group_vars/all
 ~~~
 
+In this demo, I defined the following variables:
+
+~~~
+ansible_user: ansible
+
+splunk_user: <your_username>
+splunk_pass: <your_password>
+
+splunk_uf_user: <your_username>
+splunk_uf_pass: <your_password>
+~~~
+
 ### Usage
 	
 1. Navigate to playbook base directory
