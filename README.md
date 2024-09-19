@@ -9,7 +9,7 @@ NOTE: This demo did not originate with me. I created my own version of the follo
 
 1. A single Ansible Automation Controller is sufficient for this demo.
 
-2. git clone this project:
+2. First, feel free to git clone this project:
 
 ~~~
 git clone https://github.com/jbyrdrh/splunk-install-example.git
@@ -49,60 +49,87 @@ vi group_vars/all
 	
 1. Navigate to playbook base directory
 
-		- cd ./ansible-splunk-base
+~~~
+cd ./ansible-splunk-base
+~~~
 	
 2. Run the Splunk install playbook
 
-		- ansible-playbook -i hosts install.yml
+~~~
+ansible-playbook -i hosts install.yml
+~~~
 
 3. -or- run the Splunk upgrade playbook
 
-		- ansible-playbook -i hosts upgrade.yml
+~~~
+ansible-playbook -i hosts upgrade.yml
+~~~
 
 4. -or- run the Splunk OS initial configuration playbook (built to provide a simple configuration for lab hosts)
 
-		- ansible-playbook -i hosts os-config.yml
+~~~
+ansible-playbook -i hosts os-config.yml
+~~~
 
 5. -or- run a base OS config AND install Splunk.
 
-		- ansible-playbook -i hosts combo.yml	
+~~~
+ansible-playbook -i hosts combo.yml	
+~~~
 
 6. -or- configure an TLS/SSL key pair for the web UI (tcp/8000).
 
-		- ansible-playbook -i hosts tls-config.yml						
+~~~
+ansible-playbook -i hosts tls-config.yml						
+~~~
 
 7. -or- run the Splunk UF install playbook
 
-		- ansible-playbook -i hosts uf-install.yml
+~~~
+ansible-playbook -i hosts uf-install.yml
+~~~
 
 8. -or- run the Splunk UF config playbook
 
-		- ansible-playbook -i hosts uf-config.yml
+~~~
+ansible-playbook -i hosts uf-config.yml
+~~~
 
 9. -or- run the Splunk UF install AND config playbook
 
-		- ansible-playbook -i hosts uf-combo.yml	
+~~~
+ansible-playbook -i hosts uf-combo.yml	
+~~~
 
 10. -or- run the Splunk UF upgrade playbook
 
-		- ansible-playbook -i hosts uf-upgrade.yml					
+~~~
+ansible-playbook -i hosts uf-upgrade.yml					
+~~~
 
 11. -or- run the Splunk configuration only (./etc/) backup playbook
 
-		- ansible-playbook -i hosts backup-etc.yml
+~~~
+ansible-playbook -i hosts backup-etc.yml
+~~~
 
 12. -or- run the Splunk full backup (/opt/splunk/) playbook
 
-		- ansible-playbook -i hosts backup-full.yml		
+~~~
+ansible-playbook -i hosts backup-full.yml		
+~~~
 
 13. Run an Ansible playbook limited to certain hosts within the hosts list
 
-		- ansible-playbook -i hosts --limit=host1 install.yml
+~~~
+ansible-playbook -i hosts --limit=host1 install.yml
+~~~
 
 14. Run multiple roles in one command
 
-		- ansible-playbook -i hosts os-config install.yml tls-config.yml
-
+~~~
+ansible-playbook -i hosts os-config install.yml tls-config.yml
+~~~
 
 ### Compatibility
 
