@@ -21,7 +21,7 @@ This is an Ansible project that installs or upgrades Splunk to a specific versio
 
 2. git clone this project:
 
-~~
+~~~
 git clone https://github.com/jbyrdrh/splunk-install-example.git
 ~~~
 	
@@ -33,20 +33,27 @@ cd ./ansible-splunk-base
 
 4. Copy the `hosts.sample` file to `hosts`
 
-		- cp hosts.sample hosts
+~~~
+cp hosts.sample hosts
+~~~
 
 5. Edit the hosts file to include the desired managed nodes in your test environment.
 
-		- vi hosts
+~~~
+vi hosts
+~~~
 	
 6. Copy group_vars/all.sample to group_vars/all
 
-		- cp group_vars/all.sample group_vars/all
+~~~
+cp group_vars/all.sample group_vars/all
+~~~
 
-7. Edit group_vars/all variables as appropriate for your enviornment
+7. Edit the `group_vars/all` variables as appropriate for your test environment.
 
-		- vi group_vars/all
-
+~~~
+vi group_vars/all
+~~~
 
 ### Usage
 	
