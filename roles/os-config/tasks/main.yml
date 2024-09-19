@@ -1,7 +1,7 @@
 # Copy splunk forwarder rpm to managed node
 - name: Copy splunk forwarder to managed node
   copy:
-    src: /home/ansible/ansible-splunk-base/splunkforwarder-9.3.0-51ccf43db5bd.x86_64.rpm
+    src: /home/ansible/splunk-install-example/splunkforwarder-9.3.0-51ccf43db5bd.x86_64.rpm
     dest: /home/ansible/splunkforwarder-9.3.0-51ccf43db5bd.x86_64.rpm
 
 # Install splunk forwarder

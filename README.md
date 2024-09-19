@@ -83,6 +83,8 @@ ansible-playbook -i hosts upgrade.yml
 ansible-playbook -i hosts os-config.yml
 ~~~
 
+In `roles/os-config/tasks/main.yml`, I modified the path variable for the location of the splunk forwarder rpm file.
+
 5. -or- run a base OS config AND install Splunk.
 
 ~~~
