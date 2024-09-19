@@ -71,7 +71,8 @@ cd ./ansible-splunk-base
 ansible-playbook -i hosts install.yml
 ~~~
 
-NOTE: I verfied that this playbook installs Splunk successfully on RHEL 9.
+*NOTE: I verfied that this playbook installs Splunk successfully on RHEL 9.*
+
 
 3. -or- run the Splunk upgrade playbook
 
