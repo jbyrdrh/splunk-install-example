@@ -1,5 +1,7 @@
 # Ansible-Splunk-Base
 
+In this demo, I want to show you a quick and easy way to perform a bare installation of Splunk using Ansible.
+
 I modified the example from https://github.com/johnmcgovern/ansible-splunk-base.git
 which I found on youtube: https://www.youtube.com/watch?v=vEDXfFebG3E
 
